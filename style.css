@@ -1,0 +1,184 @@
+@font-face {
+    font-family: "TT Lakes";
+    font-style: normal;
+    font-weight: 400;
+    src: local("TT Lakes"),
+         url("assets/fonts/TTLakes-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "TT Lakes";
+    font-style: normal;
+    font-weight: 500;
+    src: local("TT Lakes"),
+         url("assets/fonts/TTLakes-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: "TT Lakes";
+    font-style: normal;
+    font-weight: 700;
+    src: local("TT Lakes"),
+         url("assets/fonts/TTLakes-Bold.woff") format("woff");
+}
+
+html, body {
+    height: 100%;
+}
+
+body, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+.burger__body {
+    max-width: 320px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    box-shadow: 20px 0 100px -40px #7E7E82;
+}
+
+.burger__header {
+    display: flex;
+    align-items: center;
+    margin-top: 19px;
+}
+
+.burger__back {
+    margin-left: 24px;
+    margin-right: 16px;
+}
+
+.burger__serch {
+    margin-left: auto;
+    margin-right: 24px;
+}
+
+.burger__navigation {
+    margin-top: 46px;
+}
+
+.burger__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+
+}
+
+.burger__item {
+    display: block;
+    margin-bottom: 32px;
+    font-family: TT Lakes;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    text-align: left;
+    text-decoration: none;
+    color: #1B1C21;
+}
+
+.burger__item--activ {
+    color: #7E7E82;
+    position: relative;
+    right: 24px;
+}
+
+.burger__item--activ::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 4px;
+    height: 32px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: #41F6D7;
+    margin-right: 20px;
+}
+
+.burger__footer {
+    margin-top: auto;
+    margin-left: 24px;
+}
+
+.burger__actions {
+    list-style: none;
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.burger__actions li {
+    margin-right: 16px;
+}
+
+.footer__mail {
+    margin-bottom: 12px;
+    font-family: TT Lakes;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    text-align: left;
+    color: #1B1C21;
+}
+
+.footer__number {
+    margin-bottom: 40px;
+    font-family: TT Lakes;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    text-align: left;
+    color: #1B1C21;
+}
+
+.footer__language {
+    margin-bottom: 32px;
+}
+
+.footer__language > label {
+    margin-right: 7px;
+}
+
+.custom_radio {
+    font-family: TT Lakes;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    text-align: left;
+    color: #1B1C21;
+}
+
+.real_radio:checked + .custom_radio {
+    color: #7E7E82;
+}
+
+.real_radio {
+    width: 0;
+    height: 0;
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.btnIcon {
+    width: 40px;
+    height: 40px;
+    background-color: #FF3E79;
+    border-radius: 20px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.btnIcon:hover, .burger__logo:hover {
+    opacity: 0.6;
+    transition: 0.2s ease-in;
+}
+
+li > .burger__item:hover {
+    color: #7E7E82;
+    text-decoration: underline;
+    transition: 0.1s ease-in;
+}
